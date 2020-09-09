@@ -1,0 +1,21 @@
+[
+  {
+    "name": "hello_world_workflow",
+    "description": "Hello World",
+    "version": 1,
+    "schemaVersion": 2,
+    "inputParameters": [
+      "name"
+    ],
+    "tasks": [
+      {
+        "name": "hello_world",
+        "taskReferenceName": "hello_world_ref_1",
+        "inputParameters": {
+          "name": "${workflow.input.name}"
+        },
+        "type": "SIMPLE"
+      }
+    ]
+  }
+]
