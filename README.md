@@ -7,7 +7,7 @@ Please download docker before using this application. After installing docker, t
 
 # Spring Boot App
 
-Please start Application class and start the application.
+Please run Application class and start the application.
 
 # Rest Endpoint
 
