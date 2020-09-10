@@ -5,6 +5,8 @@ Netflix conductor basics. Workflow orchestration on microservices (https://netfl
 
 Please download docker before using this application. After installing docker, then docker-compose up will start conductor-server.
 
+conductor-ui added to docker-compose.yaml. you can access by typing http://localhost:5000 for visualization
+
 # Spring Boot App
 
 Please run Application class and start the application.
