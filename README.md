@@ -23,6 +23,16 @@ example json body is below :
 }
 ```
 
+Send @Post to http://localhost:8099/context/api/v1/movie
+
+```
+{
+    "movieType" : "Show",
+    "movieId" : "anyId"
+}
+```
+
 After rest endpoint is triggered, the if you check the console you can see the asynchrous call from conductor-server.
+You can also check conductor-ui for virtualizaton : http://localhost:5000
 
 I will explain the details in Medium as soon as possible.
