@@ -17,5 +17,65 @@
         "type": "SIMPLE"
       }
     ]
+  },
+  {
+    "name": "decision_workflow",
+    "description": "Decision Workflow",
+    "version": 1,
+    "schemaVersion": 2,
+    "inputParameters": [
+      "movieType",
+      "movieId"
+    ],
+    "tasks": [
+      {
+        "name": "decide_task",
+        "taskReferenceName": "decide1",
+        "inputParameters": {
+          "case_value_param": "${workflow.input.movieType}"
+        },
+        "type": "DECISION",
+        "caseValueParam": "case_value_param",
+        "decisionCases": {
+          "Show": [
+            {
+              "name": "setup_episodes",
+              "taskReferenceName": "setup_episodes_ref_1",
+              "inputParameters": {
+                "movieId": "${workflow.input.movieId}"
+              },
+              "type": "SIMPLE"
+            },
+            {
+              "name": "generate_episode_artwork",
+              "taskReferenceName": "generate_episode_artwork_ref_1",
+              "inputParameters": {
+                "movieId": "${workflow.input.movieId}"
+              },
+              "type": "SIMPLE"
+            }
+          ],
+          "Movie": [
+            {
+              "name": "setup_movie",
+              "taskReferenceName": "setup_movie_ref_1",
+              "inputParameters": {
+                "movieId": "${workflow.input.movieId}"
+              },
+              "type": "SIMPLE"
+            },
+            {
+              "name": "generate_movie_artwork",
+              "taskReferenceName": "generate_movie_artwork_1",
+              "inputParameters": {
+                "movieId": "${workflow.input.movieId}"
+              },
+              "type": "SIMPLE"
+            }
+          ]
+        }
+      }
+    ]
   }
+
 ]

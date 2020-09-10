@@ -5,5 +5,33 @@
       "name"
     ],
     "retryCount": 3
+  },
+  {
+    "name": "setup_episodes",
+    "inputKeys": [
+      "movieId"
+    ],
+    "type": "SIMPLE"
+  },
+  {
+    "name": "generate_episode_artwork",
+    "inputKeys": [
+      "movieId"
+    ],
+    "type": "SIMPLE"
+  },
+  {
+    "name": "setup_movie",
+    "inputKeys": [
+      "movieId"
+    ],
+    "type": "SIMPLE"
+  },
+  {
+    "name": "generate_movie_artwork",
+    "inputKeys": [
+      "movieId"
+    ],
+    "type": "SIMPLE"
   }
 ]

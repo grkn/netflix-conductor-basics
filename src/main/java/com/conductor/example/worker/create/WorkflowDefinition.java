@@ -25,6 +25,7 @@ public class WorkflowDefinition {
     private static List<JsonNode> workflows = new ArrayList<>();
     private static RestTemplate restTemplate = new RestTemplate();
     private static Boolean IS_DEFINABLE = true;
+    private static final String DECISION_TYPE = "DECISION";
 
     public static class Task {
         private String name;
